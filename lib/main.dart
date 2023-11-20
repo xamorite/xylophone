@@ -11,58 +11,84 @@ class XylophoneApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Center(
-            child: Container(
-              width: 250.0,
-              height: 500.0,
+            child: Expanded(
+              // width: 250.0,
+              // height: 500.0,
               child: Column(
                 children: [
-                  TextButton(onPressed: (){
-                    Colors.red;
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                    ),
+                    onPressed: (){
                     final player = AudioCache();
                     player.load('note1.wav');
-                  }, child: SizedBox(width: 250.0,)
 
-                    ,),
-                  TextButton(onPressed: (){
-                    Colors.orange;
-                    final player = AudioCache();
-                    player.load('note2.wav');
-                  }, child: Text('Click Me')
-
-                    ,),
-                  TextButton(onPressed: (){
-                    Colors.yellow;
-                    final player = AudioCache();
-                    player.load('note3.wav');
-                  }, child: Text('Click Me')
-
-                    ,),
-                  TextButton(onPressed: (){
-                    Colors.green;
-                    final player = AudioCache();
-                    player.load('note4.wav');
-                  }, child: Text('Click Me')
+                  }, child: SizedBox(width: 400.0,)
 
                     ,),
                   TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.orange),
+                    ),
+                    onPressed: (){
+                    final player = AudioCache();
+                    player.load('note2.wav');
+                  }, child: SizedBox(width: 400.0,)
+
+
+                  ),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.yellow),
+                    ),
+                    onPressed: (){
+                    final player = AudioCache();
+                    player.load('note3.wav');
+                  }, child:SizedBox(width: 400.0,
+                  )
+
+                    ,),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                    ),
+                    onPressed: (){
+                    final player = AudioCache();
+                    player.load('note4.wav');
+                  }, child: SizedBox(width: 400.0,)
+
+                    ,),
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.indigo),
+                    ),
                     onPressed: (){
                     final player = AudioCache();
                     player.load('note5.wav');
                   },
-                    child: Text('Click Me')
+                    child: SizedBox(width: 400.0,)
                     ,),
-                  TextButton(onPressed: (){
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                    ),
+                    onPressed: (){
                     final player = AudioCache();
                     player.load('note6.wav');
-                  }, child: Text('Click Me')
+                  }, child: SizedBox(width: 400.0,)
 
                     ,),
-                  TextButton(onPressed: (){
+                  TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
+                    ),
+                    onPressed: (){
                     final player = AudioCache();
                     player.load('note7.wav');
-                  }, child: Text('Click Me'),
+                  }, child: SizedBox(width: 400.0,)
 
-                    ),
+                   ),
                 ],
               ),
             ),
