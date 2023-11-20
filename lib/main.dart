@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
-  void playSound (){
+  void playSound (int soundNumber){
     final player = AudioCache();
-    player.load('note1.wav');
+    player.load('note$soundNumber.wav');
   }
 
   @override
@@ -26,7 +26,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
                     ),
                     onPressed: (){
-                   playSound();
+                   playSound(1);
 
                   }, child: SizedBox(width: 400.0,)
 
@@ -36,7 +36,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.orange),
                     ),
                     onPressed: (){
-                      playSound();
+                      playSound(2);
                   }, child: SizedBox(width: 400.0,)
 
 
@@ -46,7 +46,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.yellow),
                     ),
                     onPressed: (){
-                      playSound();
+                      playSound(3);
                   }, child:SizedBox(width: 400.0,
                   )
 
@@ -56,7 +56,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
                     ),
                     onPressed: (){
-                      playSound();
+                      playSound(4);
                   }, child: SizedBox(width: 400.0,)
 
                     ,),
@@ -65,7 +65,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.indigo),
                     ),
                     onPressed: (){
-                      playSound();
+                      playSound(5);
                   },
                     child: SizedBox(width: 400.0,)
                     ,),
@@ -74,7 +74,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.blue),
                     ),
                     onPressed: (){
-                      playSound();
+                      playSound(6);
                   }, child: SizedBox(width: 400.0,)
 
                     ,),
@@ -83,7 +83,7 @@ class XylophoneApp extends StatelessWidget {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
                     ),
                     onPressed: (){
-                      playSound();
+                      playSound(7);
                   }, child: SizedBox(width: 400.0,)
 
                    ),
