@@ -12,37 +12,44 @@ class XylophoneApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Container(
+              width: 250.0,
+              height: 500.0,
               child: Column(
                 children: [
                   TextButton(onPressed: (){
+                    Colors.red;
                     final player = AudioCache();
                     player.load('note1.wav');
                   }, child: SizedBox(width: 250.0,)
 
                     ,),
                   TextButton(onPressed: (){
+                    Colors.orange;
                     final player = AudioCache();
                     player.load('note2.wav');
                   }, child: Text('Click Me')
 
                     ,),
                   TextButton(onPressed: (){
+                    Colors.yellow;
                     final player = AudioCache();
                     player.load('note3.wav');
                   }, child: Text('Click Me')
 
                     ,),
                   TextButton(onPressed: (){
+                    Colors.green;
                     final player = AudioCache();
                     player.load('note4.wav');
                   }, child: Text('Click Me')
 
                     ,),
-                  TextButton(onPressed: (){
+                  TextButton(
+                    onPressed: (){
                     final player = AudioCache();
                     player.load('note5.wav');
-                  }, child: Text('Click Me')
-
+                  },
+                    child: Text('Click Me')
                     ,),
                   TextButton(onPressed: (){
                     final player = AudioCache();
