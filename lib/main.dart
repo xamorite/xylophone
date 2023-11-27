@@ -10,6 +10,21 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$soundNumber.wav'));
   }
 
+  void buildKey(){
+    Expanded(
+      child: TextButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+        ),
+        onPressed: (){
+          playSound(1);
+
+        }, child: SizedBox(width: 400.0,)
+
+        ,),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
